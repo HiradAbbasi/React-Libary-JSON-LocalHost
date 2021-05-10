@@ -1,25 +1,106 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { Switch, Route } from "react-router-dom";
+// import Header from './Header'
 import './App.css';
 
-function App() {
+const App = () => {
+  const [books, setBooks] = useState([]);
+    
+  useEffect(() => {
+    const fetchData = async () => {   
+    const response = await fetch(` http://localhost:5000/books`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const books = await response.json();
+    console.log(books);
+    setBooks(books);
+  }    
+    
+  fetchData(); 
+  }, []);
+  
+  const onCreateRestaurant = async (formData) => {
+    // formData.cuisines = formData.cuisines.split(",");    
+    // const response = await fetch(`https://6099743599011f0017140f05.mockapi.io/v1/restaurants`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(formData),
+    // });
+    // const restaurant = await response.json();
+    // console.log(restaurant)
+    
+    // setRestaurants(currentRestaurants => {
+    //   return [...currentRestaurants, restaurant]
+    // });
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Header /> */}
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <div className="app">
+              <div className="list-books">
+                <div className="list-books-title"><h1>MITTReads</h1></div>
+                <div className="list-books-content">
+                  <div>
+                    <div className="bookshelf">
+                      <h2 className="bookshelf-title">Currently Reading</h2>
+                      <div className="bookshelf-books">
+                        <ol className="books-grid">
+                          {books.map((book, index) => (
+                            <Restaurant
+                              title={restaurant.name}
+                              autors={restaurant.cuisines}
+                              image={restaurant.image}
+                              key={index}
+                            />
+                          ))}
+                        </ol>
+                      </div>
+                    </div>
+                    <div className="bookshelf">
+                      <h2 className="bookshelf-title">Want To Read</h2>
+                      <div className="bookshelf-books">
+                        <ol className="books-grid">
+                          {/* {} */}
+                        </ol>
+                      </div>
+                    </div>
+                    <div className="bookshelf">
+                      <h2 className="bookshelf-title">Read</h2>
+                      <div className="bookshelf-books">
+                        <ol className="books-grid">
+                          {/* {} */}
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="open-search"><a href="search.html">Add a book</a></div>
+              </div>
+            </div>
+          </Route>
+          {/* <Route path="/restaurants/new" render={({history}) => (
+            <CreateRestaurant
+              onCreateRestaurant={(restaurant) => {
+                onCreateRestaurant(restaurant);
+                history.push("/");
+              }}
+            />
+          )} /> */}
+        </Switch>
+      </main>
+    </>
   );
+  
 }
 
 export default App;
+
