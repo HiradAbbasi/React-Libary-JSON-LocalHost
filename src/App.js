@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
-// import Header from './Header'
+import Book from './Book'
 import './App.css';
 
 const App = () => {
@@ -55,10 +55,10 @@ const App = () => {
                       <div className="bookshelf-books">
                         <ol className="books-grid">
                           {books.map((book, index) => (
-                            <Restaurant
-                              title={restaurant.name}
-                              autors={restaurant.cuisines}
-                              image={restaurant.image}
+                            <Book
+                              title={book.title}
+                              authors={book.authors}
+                              image={book.imageLinks}
                               key={index}
                             />
                           ))}
