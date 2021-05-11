@@ -1,15 +1,25 @@
 import React from 'react';
 
 function Book (props) {
-  console.log(props.image.thumbnail)
+  let authors = props.authors;
+  // let image = props.image['thumbnail'];
+  // if (image === undefined) {
+  //   image = "https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png";
+  // }
+  
+  // if(authors === undefined) {
+  //   authors = ['Hirad', 'Abbasi'];
+  // }
+  // console.log(authors);
+
   return (
-    
     <li>
       <div className="book">
         <div className="book-top">
           <div
             className="book-cover"
-            style={{width: "128px", height: "193px",  backgroundImage: `url(${props.image})`}}
+            // backgroundImage: `url(${image})`
+            style={{width: "128px", height: "193px",  }}
           ></div>
           <div className="book-shelf-changer">
             <select>
@@ -22,7 +32,7 @@ function Book (props) {
           </div>
         </div>
         <div className="book-title">{props.title}</div>
-        <div className="book-authors">{props.authors}</div>
+        <div className="book-authors">{authors}</div>
       </div>
     </li>
   );

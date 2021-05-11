@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
 import Book from './Book'
+import Header from './Header'
 import './App.css';
 
 const App = () => {
@@ -8,14 +9,13 @@ const App = () => {
     
   useEffect(() => {
     const fetchData = async () => {   
-    const response = await fetch(` http://localhost:5000/books`, {
+    const response = await fetch(`http://localhost:5000/books`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
     });
     const books = await response.json();
-    console.log(books);
     setBooks(books);
   }    
     
@@ -55,12 +55,13 @@ const App = () => {
                       <div className="bookshelf-books">
                         <ol className="books-grid">
                           {books.map((book, index) => (
-                            <Book
-                              title={book.title}
-                              authors={book.authors}
-                              image={book.imageLinks}
-                              key={index}
-                            />
+                            console.log(book)
+                            // <Book
+                            //   title={book.title}
+                            //   authors={book.authors}
+                            //   image={book.imageLinks}
+                            //   key={index}
+                            // />
                           ))}
                         </ol>
                       </div>
@@ -87,14 +88,24 @@ const App = () => {
               </div>
             </div>
           </Route>
-          {/* <Route path="/restaurants/new" render={({history}) => (
-            <CreateRestaurant
-              onCreateRestaurant={(restaurant) => {
-                onCreateRestaurant(restaurant);
-                history.push("/");
-              }}
-            />
-          )} /> */}
+          <Route exact path="/books/search">
+            <div class="app">
+              <Header />
+              <div class="search-books-results">
+                <div class="results-quantity">Your search returned 10 results.</div>
+                <ol class="books-grid">
+                  {/* {search.map((book, index) => (
+                    <Book
+                      title={book.title}
+                      authors={book.authors}
+                      image={book.imageLinks}
+                      key={index}
+                    />
+                  ))} */}
+                </ol>
+              </div>
+            </div>
+          </Route>
         </Switch>
       </main>
     </>
@@ -104,3 +115,11 @@ const App = () => {
 
 export default App;
 
+     {/* <Route path="/restaurants/new" render={({history}) => (
+            <CreateRestaurant
+              onCreateRestaurant={(restaurant) => {
+                onCreateRestaurant(restaurant);
+                history.push("/");
+              }}
+            />
+          )} /> */}
