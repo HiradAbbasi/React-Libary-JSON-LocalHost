@@ -16,7 +16,7 @@ const App = () => {
           },
         });
         const books = await response.json();
-        setBooks(books.filter(el => el.imageLinks !== undefined && el.authors !== undefined))
+        setBooks(books.filter(el => el.imageLinks !== undefined && el.authors !== undefined));
       }
 
       fetchData();
@@ -26,12 +26,22 @@ const App = () => {
       setFilterInput(e.target.value);
     }
 
-    const changeState = (value, id) => {
+    const changeState = async(value, id) => {
       setBooks(currentState => {
         return currentState.map(
           book => book.id === id ? {...book, currentState: value } : book
         )
       });
+
+      const res = await fetch(`http://localhost:5000/books/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({...books.find(el => el.id === id), "currentState": value })
+      });
+      const result = await res.json();
+      console.log(result)
     }
 
     return ( <
@@ -143,10 +153,10 @@ const App = () => {
       /div> <
       /div> <
       div className = "search-books-results" > {
-        filterInput && < div className = "results-quantity" > Your search returned { `${books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase()) || el.authors.join().includes(filterInput)).length} ` }
+        filterInput && < div className = "results-quantity" > Your search returned { `${books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase()) || el.authors.join().toLowerCase().includes(filterInput.toLowerCase())).length} ` }
         results. < /div>} <
         ol className = "books-grid" > {
-          filterInput && books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase()) || el.authors.join().includes(filterInput)).map((book, index) => ( <
+          filterInput && books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase()) || el.authors.join().toLowerCase().includes(filterInput.toLowerCase())).map((book, index) => ( <
             Book currentState = { book.currentState }
             title = { book.title }
             authors = { book.authors }
