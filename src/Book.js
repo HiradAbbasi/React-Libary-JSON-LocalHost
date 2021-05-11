@@ -1,17 +1,9 @@
 import React from 'react';
 
-function Book(props) {
-  let authors = props.authors;
-  // let image = props.image['thumbnail'];
-  // if (image === undefined) {
-  //   image = "https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png";
-  // }
-
-  // if(authors === undefined) {
-  //   authors = ['Hirad', 'Abbasi'];
-  // }
-  // console.log(authors);
-
+const Book = (props) => {
+  const hirad = (e) => {
+    props.changeState(e.target.value, props.id);
+  }
 
   return ( <
     li >
@@ -21,17 +13,18 @@ function Book(props) {
     div className = "book-top" >
     <
     div className = "book-cover"
-    // backgroundImage: `url(${image})`
     style = {
-      { width: "128px", height: "193px", } } >
+      { width: "128px", height: "193px", backgroundImage: `url(${props.image.thumbnail})` } } >
     <
     /div> <
     div className = "book-shelf-changer" >
     <
-    select value = { props.currentState } >
+    select defaultValue = { "none" }
+    value = { props.currentState }
+    onChange = { hirad } >
     <
     option value = "move"
-    disabled = "" > Move to... < /option> <
+    disabled > Move to... < /option> <
     option value = "currentlyReading" > Currently Reading < /option> <
     option value = "wantToRead" > Want to Read < /option> <
     option value = "read" > Read < /option> <
@@ -40,10 +33,11 @@ function Book(props) {
     /div> <
     /div> <
     div className = "book-title" > { props.title } < /div> <
-    div className = "book-authors" > { authors } < /div> <
+    div className = "book-authors" > { props.authors.join(' ') } < /div> <
     /div> <
     /li>
   );
 }
+
 
 export default Book;

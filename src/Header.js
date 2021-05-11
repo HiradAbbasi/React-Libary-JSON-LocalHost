@@ -5,25 +5,7 @@ const Header = (props) => {
 
   const updateFilterInput = (e) => {
     setFilterInput(e.target.value);
-    console.log(filterInput)
     props.searchForThisMovie(filterInput);
-  }
-
-  const onCreateRestaurant = async(formData) => {
-    // formData.cuisines = formData.cuisines.split(",");    
-    // const response = await fetch(`https://6099743599011f0017140f05.mockapi.io/v1/restaurants`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // });
-    // const restaurant = await response.json();
-    // console.log(restaurant)
-
-    // setRestaurants(currentRestaurants => {
-    //   return [...currentRestaurants, restaurant]
-    // });
   }
 
   return ( <

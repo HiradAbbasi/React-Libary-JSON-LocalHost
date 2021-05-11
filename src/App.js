@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import Book from './Book'
-import Header from './Header'
+// import Header from './Header'
 import './App.css';
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         },
       });
       const books = await response.json();
-      setBooks(books);
+      setBooks(books.filter(el => el.imageLinks !== undefined && el.authors !== undefined))
     }
 
     fetchData();
@@ -25,8 +25,17 @@ const App = () => {
 
   const updateFilterInput = (e) => {
     setFilterInput(e.target.value);
-    console.log(books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase())));
-    //|| el.authors.join().includes(filterInput))
+  }
+
+  const changeState = (value, id) => {
+    console.log(value, id)
+    setBooks(currentState => {
+      return currentState.map(
+        book => book.id === id ? {...book, currentState: value } : book
+      )
+    });
+    //|| el.authors.join().includes(filterInput)
+    //console.log(books.find(el => el.id === id).authors.join().includes());
   }
 
   return ( <
@@ -53,15 +62,16 @@ const App = () => {
     div className = "bookshelf-books" >
     <
     ol className = "books-grid" > {
-      /* {books.map((book, index) => (
-                                  console.log(book)
-                                  // <Book
-                                  //   title={book.title}
-                                  //   authors={book.authors}
-                                  //   image={book.imageLinks}
-                                  //   key={index}
-                                  // />
-                                ))} */
+      books.filter(el => el.currentState === "currentlyReading").map((book, index) => ( <
+        Book currentState = { book.currentState }
+        title = { book.title }
+        authors = { book.authors }
+        image = { book.imageLinks }
+        id = { book.id }
+        key = { index }
+        changeState = { changeState }
+        />
+      ))
     } <
     /ol> <
     /div> <
@@ -71,7 +81,18 @@ const App = () => {
     h2 className = "bookshelf-title" > Want To Read < /h2> <
     div className = "bookshelf-books" >
     <
-    ol className = "books-grid" > { /* {} */ } <
+    ol className = "books-grid" > {
+      books.filter(el => el.currentState === "wantToRead").map((book, index) => ( <
+        Book currentState = { book.currentState }
+        title = { book.title }
+        authors = { book.authors }
+        image = { book.imageLinks }
+        id = { book.id }
+        key = { index }
+        changeState = { changeState }
+        />
+      ))
+    } <
     /ol> <
     /div> <
     /div> <
@@ -80,13 +101,27 @@ const App = () => {
     h2 className = "bookshelf-title" > Read < /h2> <
     div className = "bookshelf-books" >
     <
-    ol className = "books-grid" > { /* {} */ } <
+    ol className = "books-grid" > {
+      books.filter(el => el.currentState === "read").map((book, index) => ( <
+        Book currentState = { book.currentState }
+        title = { book.title }
+        authors = { book.authors }
+        image = { book.imageLinks }
+        id = { book.id }
+        key = { index }
+        changeState = { changeState }
+        />
+      ))
+    } <
     /ol> <
     /div> <
     /div> <
     /div> <
-    /div> <
-    div className = "open-search" > < a href = "search.html" > Add a book < /a></div >
+    /div>
+
+    <
+    div className = "open-search" > < Link to = "/search"
+    className = 'close-search' > Add a book < /Link></div >
     <
     /div> <
     /div> <
@@ -99,8 +134,8 @@ const App = () => {
     <
     div className = "search-books-bar" >
     <
-    a className = "close-search"
-    href = "index.html" > Close < /a> <
+    Link to = "/"
+    className = 'close-search' > Close < /Link> <
     div className = "search-books-input-wrapper" >
     <
     input className = 'search-contacts'
@@ -111,25 +146,21 @@ const App = () => {
     /> <
     /div> <
     /div> <
-    div className = "search-books-results" > { /* <div className="results-quantity">Your search returned 10 results.</div> */ } <
+    div className = "search-books-results" >
+    <
+    div className = "results-quantity" > Your search returned { books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase()) || el.authors.join().includes(filterInput)).length }
+    results. < /div> <
     ol className = "books-grid" > {
-      books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase())).map((book, index) => ( <
-        Book title = { book.title }
+      books.filter(el => el.title.toLowerCase().includes(filterInput.toLowerCase()) || el.authors.join().includes(filterInput)).map((book, index) => ( <
+        Book currentState = { book.currentState }
+        title = { book.title }
         authors = { book.authors }
         image = { book.imageLinks }
-        currentState = { "none" }
+        id = { book.id }
         key = { index }
+        changeState = { changeState }
         />
       ))
-    } {
-      /* {search.map((book, index) => (
-                            <Book
-                              title={book.title}
-                              authors={book.authors}
-                              image={book.imageLinks}
-                              key={index}
-                            />
-                          ))} */
     } <
     /ol> <
     /div> <
@@ -144,14 +175,3 @@ const App = () => {
 }
 
 export default App;
-
-{
-  /* <Route path="/restaurants/new" render={({history}) => (
-              <CreateRestaurant
-                onCreateRestaurant={(restaurant) => {
-                  onCreateRestaurant(restaurant);
-                  history.push("/");
-                }}
-              />
-            )} /> */
-}
