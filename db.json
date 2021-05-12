@@ -82,7 +82,8 @@
       "previewLink": "http://books.google.com/books?id=tsRhkvo80iUC&q=android&dq=android&hl=&cd=2&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=tsRhkvo80iUC&dq=android&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/The_Android_Invasion.html?hl=&id=tsRhkvo80iUC",
-      "id": "tsRhkvo80iUC"
+      "id": "tsRhkvo80iUC",
+      "currentState": "none"
     },
     {
       "id": "xlp6NE2NWecC"
@@ -1365,7 +1366,7 @@
       "infoLink": "http://books.google.com/books?id=NhLQbSdTKooC&dq=biography&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/The_Art_of_Biography_in_Antiquity.html?hl=&id=NhLQbSdTKooC",
       "id": "NhLQbSdTKooC",
-      "currentState": "wantToRead"
+      "currentState": "none"
     },
     {
       "title": "Samuel Beckett",
@@ -1872,7 +1873,8 @@
       "previewLink": "http://books.google.com/books?id=J1t8g_yX1wcC&printsec=frontcover&dq=comics&hl=&cd=5&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=J1t8g_yX1wcC&dq=comics&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Of_Comics_and_Men.html?hl=&id=J1t8g_yX1wcC",
-      "id": "J1t8g_yX1wcC"
+      "id": "J1t8g_yX1wcC",
+      "currentState": "none"
     },
     {
       "title": "Understanding Comics",
@@ -2309,7 +2311,8 @@
       "previewLink": "http://books.google.com/books?id=tgNKwRM00w0C&printsec=frontcover&dq=comics&hl=&cd=15&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=tgNKwRM00w0C&dq=comics&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/The_System_of_Comics.html?hl=&id=tgNKwRM00w0C",
-      "id": "tgNKwRM00w0C"
+      "id": "tgNKwRM00w0C",
+      "currentState": "none"
     },
     {
       "title": "The Rise and Reason of Comics and Graphic Literature",
@@ -2663,7 +2666,8 @@
       "previewLink": "http://books.google.com/books?id=1yx1tgAACAAJ&dq=drama&hl=&cd=3&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=1yx1tgAACAAJ&dq=drama&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Drama.html?hl=&id=1yx1tgAACAAJ",
-      "id": "1yx1tgAACAAJ"
+      "id": "1yx1tgAACAAJ",
+      "currentState": "none"
     },
     {
       "title": "Drama",
@@ -5653,7 +5657,8 @@
       "previewLink": "http://books.google.com/books?id=zYI6_uJ66jIC&printsec=frontcover&dq=games&hl=&cd=15&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=zYI6_uJ66jIC&dq=games&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Games_of_the_North_American_Indians_Game.html?hl=&id=zYI6_uJ66jIC",
-      "id": "zYI6_uJ66jIC"
+      "id": "zYI6_uJ66jIC",
+      "currentState": "none"
     },
     {
       "title": "War and Games",
@@ -7104,7 +7109,8 @@
       "previewLink": "http://books.google.com/books?id=sGsCvFqnbvQC&printsec=frontcover&dq=ios&hl=&cd=9&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=sGsCvFqnbvQC&dq=ios&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Beginning_iOS_Storyboarding.html?hl=&id=sGsCvFqnbvQC",
-      "id": "sGsCvFqnbvQC"
+      "id": "sGsCvFqnbvQC",
+      "currentState": "none"
     },
     {
       "title": "Sams Teach Yourself Core Data for Mac and iOS in 24 Hours",
@@ -7667,7 +7673,8 @@
       "previewLink": "http://books.google.com/books?id=PXa2bby0oQ0C&printsec=frontcover&dq=javascript&hl=&cd=2&source=gbs_api",
       "infoLink": "https://play.google.com/store/books/details?id=PXa2bby0oQ0C&source=gbs_api",
       "canonicalVolumeLink": "https://market.android.com/details?id=book-PXa2bby0oQ0C",
-      "id": "PXa2bby0oQ0C"
+      "id": "PXa2bby0oQ0C",
+      "currentState": "none"
     },
     {
       "title": "Eloquent JavaScript, 2nd Ed.",
@@ -8678,7 +8685,8 @@
       "previewLink": "http://books.google.com/books?id=qIjQjgEACAAJ&dq=kafka&hl=&cd=5&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=qIjQjgEACAAJ&dq=kafka&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Kafka.html?hl=&id=qIjQjgEACAAJ",
-      "id": "qIjQjgEACAAJ"
+      "id": "qIjQjgEACAAJ",
+      "currentState": "none"
     },
     {
       "title": "Selected Short Stories of Franz Kafka",
@@ -10868,7 +10876,8 @@
       "previewLink": "http://books.google.com/books?id=lcPm0nRIITwC&printsec=frontcover&dq=mystery&hl=&cd=19&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=lcPm0nRIITwC&dq=mystery&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/The_Mystery_of_Economic_Growth.html?hl=&id=lcPm0nRIITwC",
-      "id": "lcPm0nRIITwC"
+      "id": "lcPm0nRIITwC",
+      "currentState": "none"
     },
     {
       "title": "Magic and Mystery in Tibet",
@@ -14109,7 +14118,8 @@
       "previewLink": "http://books.google.com/books?id=dGrCooK63TsC&pg=PA33&dq=satire&hl=&cd=16&source=gbs_api",
       "infoLink": "https://play.google.com/store/books/details?id=dGrCooK63TsC&source=gbs_api",
       "canonicalVolumeLink": "https://market.android.com/details?id=book-dGrCooK63TsC",
-      "id": "dGrCooK63TsC"
+      "id": "dGrCooK63TsC",
+      "currentState": "none"
     },
     {
       "title": "Satire in the 18th century",
@@ -14626,7 +14636,8 @@
       "previewLink": "http://books.google.com/books?id=uwcPAAAAQAAJ&printsec=frontcover&dq=travel&hl=&cd=9&source=gbs_api",
       "infoLink": "https://play.google.com/store/books/details?id=uwcPAAAAQAAJ&source=gbs_api",
       "canonicalVolumeLink": "https://market.android.com/details?id=book-uwcPAAAAQAAJ",
-      "id": "uwcPAAAAQAAJ"
+      "id": "uwcPAAAAQAAJ",
+      "currentState": "none"
     },
     {
       "title": "Islam and Travel in the Middle Ages",
@@ -16975,7 +16986,8 @@
       "previewLink": "http://books.google.com/books?id=FozZWHiSxrsC&printsec=frontcover&dq=web+development&hl=&cd=5&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=FozZWHiSxrsC&dq=web+development&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Beginning_Smartphone_Web_Development.html?hl=&id=FozZWHiSxrsC",
-      "id": "FozZWHiSxrsC"
+      "id": "FozZWHiSxrsC",
+      "currentState": "none"
     },
     {
       "title": "Web Development with Java",
