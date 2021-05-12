@@ -42,7 +42,8 @@
       "previewLink": "http://books.google.com/books?id=bUybAgAAQBAJ&dq=android&hl=&cd=1&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=bUybAgAAQBAJ&dq=android&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Best_Android_Apps.html?hl=&id=bUybAgAAQBAJ",
-      "id": "bUybAgAAQBAJ"
+      "id": "bUybAgAAQBAJ",
+      "currentState": "none"
     },
     {
       "title": "The Android Invasion",
@@ -13426,7 +13427,8 @@
       "previewLink": "http://books.google.com/books?id=ZwCCBgAAQBAJ&printsec=frontcover&dq=robotics&hl=&cd=19&source=gbs_api",
       "infoLink": "https://play.google.com/store/books/details?id=ZwCCBgAAQBAJ&source=gbs_api",
       "canonicalVolumeLink": "https://market.android.com/details?id=book-ZwCCBgAAQBAJ",
-      "id": "ZwCCBgAAQBAJ"
+      "id": "ZwCCBgAAQBAJ",
+      "currentState": "none"
     },
     {
       "title": "Mobile Robotics in Healthcare",
