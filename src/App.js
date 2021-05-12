@@ -54,7 +54,7 @@ const App = () => {
       div className = "bookshelf-books" >
       <
       ol className = "books-grid" > {
-        books.filter(el => el.currentState === "currentlyReading").map((book, index) => ( <
+        books.filter(book => book.currentState === "currentlyReading").map((book, index) => ( <
           Book title = { book.title }
           authors = { book.authors }
           image = { book.imageLinks }
@@ -74,7 +74,7 @@ const App = () => {
       div className = "bookshelf-books" >
       <
       ol className = "books-grid" > {
-        books.filter(el => el.currentState === "wantToRead").map((book, index) => ( <
+        books.filter(book => book.currentState === "wantToRead").map((book, index) => ( <
           Book title = { book.title }
           authors = { book.authors }
           image = { book.imageLinks }
@@ -94,7 +94,7 @@ const App = () => {
       div className = "bookshelf-books" >
       <
       ol className = "books-grid" > {
-        books.filter(el => el.currentState === "read").map((book, index) => ( <
+        books.filter(book => book.currentState === "read").map((book, index) => ( <
           Book title = { book.title }
           authors = { book.authors }
           image = { book.imageLinks }
@@ -134,10 +134,10 @@ const App = () => {
       /div> <
       /div> <
       div className = "search-books-results" > {
-        search && < div className = "results-quantity" > Your search returned { `${books.filter(el => el.title.toLowerCase().includes(search.toLowerCase()) || el.authors.join().toLowerCase().includes(search.toLowerCase())).length} ` }
+        search && < div className = "results-quantity" > Your search returned { `${books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()) || book.authors.join().toLowerCase().includes(search.toLowerCase())).length} ` }
         results. < /div>} <
         ol className = "books-grid" > {
-          search && books.filter(el => el.title.toLowerCase().includes(search.toLowerCase()) || el.authors.join().toLowerCase().includes(search.toLowerCase())).map((book, index) => ( <
+          search && books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()) || book.authors.join().toLowerCase().includes(search.toLowerCase())).map((book, index) => ( <
             Book title = { book.title }
             authors = { book.authors }
             image = { book.imageLinks }
