@@ -1408,7 +1408,8 @@
       "previewLink": "http://books.google.com/books?id=y53j4MKTausC&printsec=frontcover&dq=biography&hl=&cd=14&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=y53j4MKTausC&dq=biography&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Samuel_Beckett.html?hl=&id=y53j4MKTausC",
-      "id": "y53j4MKTausC"
+      "id": "y53j4MKTausC",
+      "currentState": "currentlyReading"
     },
     {
       "title": "Giacometti",
@@ -6899,7 +6900,8 @@
       "previewLink": "http://books.google.com/books?id=JZwC4fjDqgIC&printsec=frontcover&dq=ios&hl=&cd=4&source=gbs_api",
       "infoLink": "http://books.google.com/books?id=JZwC4fjDqgIC&dq=ios&hl=&source=gbs_api",
       "canonicalVolumeLink": "https://books.google.com/books/about/Geolocation_in_IOS.html?hl=&id=JZwC4fjDqgIC",
-      "id": "JZwC4fjDqgIC"
+      "id": "JZwC4fjDqgIC",
+      "currentState": "wantToRead"
     },
     {
       "title": "iOS Wow Factor",
